@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int t;
+    cin>>t;
+    int n[t];
+    int x = 0;
+    for(int i=0; i<t ;i++){
+        cin>>n[i];
+        x = x^n[i];
+    }
+    if(t==2){
+        if(n[0]>n[1])
+        cout<<n[1]<<" "<<n[0];
+        else
+        cout<<n[0]<<" "<<n[1];
+    }
+    else{
+        int i =0;
+        for(i=0; i<32; i++){
+            if(x & (1<<i))
+            break;
+        }
+        int z =0,y=0;
+        for(int j=0; j<t ; j++ ){
+            bool p = n[j] & (1<<i);
+            if(p)
+            z = z^n[j];
+            else
+            y = y^n[j];
+    }
+    cout<<min(y,z)<<" "<<max(y,z);
+    }
+    return 0;
+}

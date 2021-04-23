@@ -1,0 +1,19 @@
+class Solution {
+public:
+    bool hasAlternatingBits(int n) {
+           for(int i=0; i<(int)log2(n) ; i++){
+            bool x = n & (1<<i);
+            bool y = n & (1<<(i+1));
+            if(x == y)
+            {
+            
+              return false;
+            
+            }
+            else
+                continue;
+            cout<<x<<y<<endl;
+        }
+        return true ; 
+    }
+};

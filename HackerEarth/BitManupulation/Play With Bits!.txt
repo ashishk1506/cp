@@ -1,0 +1,28 @@
+#include<iostream>
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int t;
+    cin>>t;
+    while(t--){
+        int n;
+        cin>>n;
+        int count =0 ;
+        for(int i=0;i <n; i++){
+            long long a;
+            
+            cin>>a;
+            while(a>0){
+                if((a & 1) == 0)
+                    count++;
+                else
+                    a = a ^ 1;
+                a = a/2;
+            }    
+        }
+        cout<<count<<endl;
+        
+    }
+   
+    return 0;
+}
