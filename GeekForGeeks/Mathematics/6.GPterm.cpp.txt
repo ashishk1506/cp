@@ -1,0 +1,9 @@
+class Solution{
+    public:
+        //Complete this function
+    double termOfGP(int A,int B,int N)
+    {
+        
+        return A*pow((double)B/(double)A,N-1);
+    }
+};
