@@ -1,0 +1,32 @@
+class Solution {
+public:
+    int clumsy(int n) {
+        int k = 1;
+        signed long long p;
+        int sum = 0;
+        bool count = 0;
+        while(n>0){
+            if(count == 0)
+            { 
+                if(n-1 == 0)
+                    p = k*n;
+                else{
+                     p = k*n*(n-1);
+                }
+                count = 1;
+            }
+            else{
+                p = p/n;
+                count = 0;
+                sum = sum + p + (n-1);
+            }
+            n = n-2;
+            k = -1;
+        }
+        if(count)
+            return sum + p;
+        else
+            return sum;
+    }
+
+};
