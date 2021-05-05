@@ -1,0 +1,2 @@
+
+    if(isPrime[i]){
