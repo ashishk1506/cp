@@ -1,0 +1,17 @@
+ void sub(string &s,string k, int n, vector<string> &a)
+   {
+       if(n == s.length())
+          {
+              a.push_back(k);
+              return;
+          }
+        sub(s, k, n+1, a);
+        sub(s, k+s[n], n+1, a);
+   }
+vector <string> powerSet(string s)
+{ //vector<string> sub(string, string, int, vector<string>);
+  
+   vector<string> c;
+   sub( s ,"",0,c);
+   return c;
+}
