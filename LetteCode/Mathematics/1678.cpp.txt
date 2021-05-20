@@ -1,0 +1,26 @@
+class Solution {
+public:
+    string interpret(string command) {
+        string str = "";
+        int i = 0;
+        while(i<command.length()){
+        
+            if(command[i] == '(' )
+            {
+                if(command[i+1] == ')')
+                {
+                     str = str + "o";
+                     i++;
+                }
+                else{
+                    str = str + "al";
+                    i = i+3;
+                }
+            }else{
+                  str = str + command[i];
+            }
+          i++; 
+        }
+        return str;
+    }
+};
