@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+	bool isPal(string, int, int);
+	string s;
+	cin>>s;
+	if(isPal(s,0, s.length()-1))
+	cout<<"YES";
+	else
+	cout<<"NO";
+	return 0;
+}
+bool isPal(string str, int i, int n){
+  if(i - n >= 0){
+	return 1;
+  }
+  if(str[i] == str[n])
+    return isPal(str, i+1, n-1);
+  else 
+    return 0;
+}
