@@ -1,0 +1,18 @@
+class Solution {
+  public:
+    string removeChars(string string1, string string2) {
+        string s3 = "";
+        int l = 0, i=0;
+        while(l<string1.length()){
+            for( i=0; i<string2.length(); i++){
+                if(string1[l] == string2[i])
+                 break;
+            }
+            if(i == string2.length())
+              s3 += string1[l];
+            i = 0;
+            l++;
+        }
+        return s3;
+    }
+};

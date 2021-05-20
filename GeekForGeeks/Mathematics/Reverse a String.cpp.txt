@@ -1,0 +1,9 @@
+string reverseWord(string str){
+    
+  string rev = "";
+  int l = str.length();
+  while(l--){
+      rev = rev + str[l];
+  }
+  return rev;
+}
