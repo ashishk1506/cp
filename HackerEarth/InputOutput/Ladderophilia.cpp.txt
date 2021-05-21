@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    void star(int);
+	int n;
+	cin>>n;
+	star(n);
+	return 0;
+}
+void star(int n){
+while(n>=0){
+	cout<<"*   *"<<endl;
+	cout<<"*   *"<<endl;
+	if(n==0)
+ 	break;
+	else
+	cout<<"*****"<<endl;
+	n--;
+}
+}
+
