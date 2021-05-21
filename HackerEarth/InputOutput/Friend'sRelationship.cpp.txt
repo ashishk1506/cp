@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+int t;
+cin>>t;
+void draw(int, int, char);
+while(t--){
+    int n;
+    cin>>n;
+    for(int i=1; i<=n ; i++){
+        draw(1,i,'*');
+        draw(i+1,2*n-i,'#');
+        draw(2*n-i+1,2*n,'*');
+        cout<<endl;
+    }
+    cout<<endl;
+}
+return 0;
+}
+void draw(int s,int e,char str){
+    while(s<=e){
+        cout<<str;
+        s++;
+    }
+}
