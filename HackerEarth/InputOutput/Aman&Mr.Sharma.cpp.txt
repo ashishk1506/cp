@@ -1,0 +1,17 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  int d;
+  cin>>d;
+  int count = 0;
+  while(d--){
+	  int r, x;
+	  cin>>r>>x;
+	  if(100*x >= 44/7.0*r)
+	  count++;
+  }
+  cout<<count;
+  return 0;
+}
